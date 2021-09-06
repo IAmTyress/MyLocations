@@ -47,6 +47,26 @@ class LocationDetailsViewController: UITableViewController {
         }
         
         dateLabel.text = format(date: Date())
+        
+        // Hide keyboard
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    // MARK: -- Table View Delegates
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.section < 2 {
+            return indexPath
+        } else {
+            return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            descriptionTextView.becomeFirstResponder()
+        }
     }
 
     // MARK: -- Helper Methods
@@ -78,9 +98,25 @@ class LocationDetailsViewController: UITableViewController {
         return dateFormatter.string(from: date)
     }
     
+    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
+    }
+    
     // MARK: -- Actions
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        let hudView = HudView.hud(inView: navigationController!.view, animated: true)
+        
+        hudView.text = "Tagged"
+        afterDelay(0.6) {
+            hudView.hide()
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func cancel() {
