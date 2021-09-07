@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {    
     // MARK: -- Variables & Constants
@@ -20,6 +21,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
     var timer: Timer?
+    var managedObjectContext: NSManagedObjectContext!
     
     // MARK: -- Outlets
     @IBOutlet weak var messageLabel: UILabel!
@@ -242,12 +244,13 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
-    // MARK: -- Prepare For Segue
+    // MARK: -- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TagLocation" {
             let controller = segue.destination as! LocationDetailsViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
+            controller.managedObjectContext = managedObjectContext
         }
     }
 }
