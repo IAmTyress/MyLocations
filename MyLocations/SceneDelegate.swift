@@ -31,6 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        customizeAppearance()
+        
         let tabController = window!.rootViewController as! UITabBarController
         
         if let tabViewControllers = tabController.viewControllers {
@@ -96,6 +98,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let tabController = self.window!.rootViewController!
             tabController.present(alert, animated: true, completion: nil)
         })
+    }
+    
+    func customizeAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:
+            UIColor.white ]
+        
+        UITabBar.appearance().barTintColor = UIColor.black
+        
+        let tintColor = UIColor(red: 255/255.0,
+                                green: 238/255.0,
+                                blue: 136/255.0,
+                                alpha: 1.0)
+        UITabBar.appearance().tintColor = tintColor
     }
 }
 
