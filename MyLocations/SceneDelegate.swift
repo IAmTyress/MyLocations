@@ -32,6 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         customizeAppearance()
+        self.window!.tintColor = UIColor(red: 255/255.0, green: 238/255.0, blue: 136/255.0, alpha: 1.0)
         
         let tabController = window!.rootViewController as! UITabBarController
         
@@ -115,5 +116,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UITabBar.appearance().tintColor = tintColor
     }
 }
-
-

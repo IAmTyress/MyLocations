@@ -18,10 +18,10 @@
 		6E5E830426DCCD0A008B372C /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E830326DCCD0A008B372C /* CurrentLocationViewController.swift */; };
 		6E5E830926DCCD0A008B372C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E830726DCCD0A008B372C /* Main.storyboard */; };
 		6E5E830B26DCCD0B008B372C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E830A26DCCD0B008B372C /* Assets.xcassets */; };
-		6E5E830E26DCCD0B008B372C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E830C26DCCD0B008B372C /* LaunchScreen.storyboard */; };
 		6E9256AE26E0CCA40016A73C /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9256AD26E0CCA40016A73C /* CategoryPickerViewController.swift */; };
 		6E9256B026E107A90016A73C /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9256AF26E107A90016A73C /* HudView.swift */; };
 		6E9DD09626EB9FFE006FC028 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9DD09526EB9FFE006FC028 /* UIImage+Resize.swift */; };
+		6EA5120C26EE3C930035B6F2 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 6EA5120B26EE3C920035B6F2 /* Sound */; };
 		6EA5B51726E78A980092F396 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5B51626E78A980092F396 /* LocationsViewController.swift */; };
 		6EA5B51926E7ADA00092F396 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5B51826E7ADA00092F396 /* LocationCell.swift */; };
 		6EBDB84026E62B0900E1B89D /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDB83F26E62B0900E1B89D /* Functions.swift */; };
@@ -43,11 +43,11 @@
 		6E5E830326DCCD0A008B372C /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		6E5E830826DCCD0A008B372C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E5E830A26DCCD0B008B372C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E5E830D26DCCD0B008B372C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E5E830F26DCCD0B008B372C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9256AD26E0CCA40016A73C /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		6E9256AF26E107A90016A73C /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		6E9DD09526EB9FFE006FC028 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		6EA5120B26EE3C920035B6F2 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = "../../../iOSDevelopment/SourcesForBook/03-my-locations/Resources/Sound"; sourceTree = "<group>"; };
 		6EA5B51626E78A980092F396 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		6EA5B51826E7ADA00092F396 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		6EBDB83F26E62B0900E1B89D /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -96,12 +96,12 @@
 		6E5E82FE26DCCD0A008B372C /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				6EA5120B26EE3C920035B6F2 /* Sound */,
 				6E5E82FF26DCCD0A008B372C /* AppDelegate.swift */,
 				6E5E830126DCCD0A008B372C /* SceneDelegate.swift */,
 				6E5E830326DCCD0A008B372C /* CurrentLocationViewController.swift */,
 				6E5E830726DCCD0A008B372C /* Main.storyboard */,
 				6E5E830A26DCCD0B008B372C /* Assets.xcassets */,
-				6E5E830C26DCCD0B008B372C /* LaunchScreen.storyboard */,
 				6E5E830F26DCCD0B008B372C /* Info.plist */,
 				6E3CA44326DFBB2F004F04D7 /* LocationDetailsViewController.swift */,
 				6E9256AD26E0CCA40016A73C /* CategoryPickerViewController.swift */,
@@ -179,8 +179,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5E830E26DCCD0B008B372C /* LaunchScreen.storyboard in Resources */,
 				6E5E830B26DCCD0B008B372C /* Assets.xcassets in Resources */,
+				6EA5120C26EE3C930035B6F2 /* Sound in Resources */,
 				6E5E830926DCCD0A008B372C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +221,6 @@
 				6E5E830826DCCD0A008B372C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6E5E830C26DCCD0B008B372C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E5E830D26DCCD0B008B372C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
